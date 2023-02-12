@@ -1,0 +1,279 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* End of reset*/
+
+html {
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+    margin: 0 auto;
+    min-width: 485px;
+    max-width: 1300px;
+    background-color: #ffffff;
+}
+
+main {
+    background-color: #ffffff;
+}
+
+header {
+    color: #007d7b;
+    background-color: #ffffff;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: bolder;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+nav {
+    background-color: #000000;
+    padding: 20px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+nav ul {
+    list-style-type: none;
+    flex-direction: row;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    background-color: #007d7b;
+    color: #ffffff;
+    padding: 10px;
+}
+
+[href="#top"] {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 10px 0 0px 0px;
+    background-color: #000000;
+}
+
+nav li {
+    padding-left: 15px;
+}
+
+section h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+section>p {
+    font-size: 1.25em;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+#photogrid {
+    display: grid;
+    margin: auto;
+    grid-template-rows: 1fr;
+    justify-content: center;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+#contact {
+    background-color: #000000;
+    color: #ffffff;
+    margin-left: -10px;
+    margin-right: -10px;
+    text-align: center;
+}
+
+#contact h2 {
+    text-align: center;
+    padding-top: 30px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    padding: 40px;
+}
+
+::placeholder {
+    color: #007d7b;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+input[type=submit] {
+    background: #007d7b;
+    color: #ffffff;
+    border-radius: 12px;
+    font-weight: bold;
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+input[type="submit"]:hover {
+    outline: 4px solid;
+    outline-color: #ffffff;
+}
+
+input[value] {
+    padding: 8px;
+    text-transform: uppercase;
+}
+
+footer  {
+    justify-content: center;
+    color: white;
+    background-color: black;
+    padding:15px;
+    text-align: center;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -20px;
+    font-size: small;
+}
+
+
+@media screen and (min-width: 888px)  {
+
+    #photogrid  {
+        grid-template-columns: 1fr 1fr ;
+        padding: 15px;
+    }
+
+    body {
+        width: 888px;
+    }
+
+    .contact {
+        display: grid;
+        background-color: black;
+        color: white;
+        justify-content: center;
+    }
+    
+    form>input {
+        display:grid;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    footer {
+        justify-content: center;
+        color: white;
+        background-color: black;
+    }
+
+    input {
+        justify-content: center;
+        color: #007d7b;
+        font-weight: bold;
+    }
+    
+}
+
+@media screen and (min-width: 1300px) {
+
+
+    nav ul {
+        display: flex;
+        justify-content: right;
+    } 
+
+    #photogrid {
+        grid-template-columns: 1fr 1fr 1fr ;
+        padding:25px;
+        grid-gap:15px;
+    }
+
+    
+}
+
+
+
